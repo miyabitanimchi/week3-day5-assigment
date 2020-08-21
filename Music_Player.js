@@ -32,23 +32,40 @@ let library = {
 
 
   printAllSongNames: function() {
+      let songIds = Object.keys(library.songs)
+      // console.log(songIds)
+      for (let i = 0; i < songIds.length; i++) {
+        console.log(library.songs[songIds[i]].name)
+      }
+  
     // print the names of all the songs to the console
+    
   },
 
   printSongName: function(songID) {
+    console.log(library.songs[songID].name);
+    
     // print the name of a song when given its ID
   },
 
   printPlaylistName: function(playlistID) {
+    console.log(library.playlists[playlistID].name);
     // Print the name of a playlist when given its ID 
   },
 
   printAllPlaylistNames: function() {
+    const playlistIDs = Object.keys(library.playlists)
+    for (let i = 0; i < playlistIDs.length; i++) {
+      console.log(library.playlists[playlistIDs[i]].name);
+    }
     // Print the nmaes of all the playlists 
   },
 
 
   printPlaylistSongs: function(playlistID) {
+    const inTracks = Object.keys(library.playlists)
+    
+    console.log(library.playlists[playlistID].name.tracks[]);
     // Print the names of all the songs in whatever playlist id was given
   },
 
@@ -76,7 +93,17 @@ let library = {
 }
 
 
+// library.printAllSongNames()
+// library.printSongName("s02");
+// library.printPlaylistName("p01");
+// library.printAllPlaylistNames();
+library.printPlaylistSongs(playlistID);
+// library.printAllSongNames();
 
+
+
+
+// console.log(Object.keys(library.name));
 // console.log(Object.keys(library.songs))
 
 // library.addSongToPlaylist('s02', 'p02');
